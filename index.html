@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+
+    <link rel="stylesheet" type="text/css" href=".index.css"></head>
+  
+  <div class="divcolumn">
+    <img class="SAheader" src="https://cdn.discordapp.com/attachments/740443180679299074/977789683364921384/navbarsa.PNG"></img>
+   
+    <div class="title"> A Journey Toward Womanhood</div>
+    <div class="numberone"> #1 Teen Program for Girls</div>
+    <a href="https://sisterhoodagenda.com/courses/"> 
+    <img class="titlebelow" src="https://cdn.discordapp.com/attachments/740443180679299074/976295142908653568/regnow.PNG"></img>
+ 
+    </a>
+    <a href="https://sisterhoodagenda.com/?s=a+journey+toward+womanhood&post_type=product"> 
+      <img class="titlebelow" src="https://cdn.discordapp.com/attachments/740443180679299074/976705480292433920/notenrolled.PNG" style="margin-left:30%;width:40%;"></img>
+    </a>
+
+    <div class="this_row"> 
+      <img src="https://cdn.discordapp.com/attachments/740443180679299074/976713988291330128/circlewomandhood.PNG"> </img>
+      <div class="desc"> This award-winning course promotes self-esteem, holistic health, life skills, and emotional well-being. All girls ages 12-17 can join! <br>
+        Sisterhood Agenda has won over 30 awards and we've been doing this for over 25 years!  <br>
+        Register now by clicking on <a href="https://sisterhoodagenda.com/?s=a+journey+toward+womanhood&post_type=product" style="color:goldenrod;text-decoration:none;">Take This Course. </a>
+      </div>
+    </div>
+
+    
+
+    <div class="testimonial-container">
+      <button  onclick="plusDivs(-1)" style="background-color:goldenrod;color:white;outline:none; border:none; margin-right:2%; height:50px;width:2%;">&#10094;</button>
+      <div class="testimonials" id="testimonials"> 
+        <img class="mySlides" alt="Avatar"src="https://cdn.discordapp.com/attachments/740443180679299074/977277047464394762/random.jpg" >
+        <div class="testimonial-text"> Julia <br>"A Journey Toward Womanhood taught me to see more of my individuality and freedom. Today I walk the world confidently and proud."</div>
+      </div>
+     
+      
+        <button  onclick="plusDivs(1)"style="background-color:goldenrod;color:white;outline:none; border:none; margin-left:2%; height:50px;width:2%;"> &#10095;</button>
+      
+      </div>
+      
+      <script>
+        //Script for carousal movement. showDivs is for the Imagery while Showtext is for the text.
+      var slideIndex = 1;
+      var ab=1;
+      showDivs(slideIndex);
+      showText(ab);
+      
+      function plusDivs(n) {
+        console.log('plus divs');
+        showDivs(slideIndex += n);
+        showText(ab +=n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      function showText(n) {
+        var i;
+        var x = document.getElementsByClassName("testimonial-text");
+        console.log(x.length);
+        if (n > x.length) {ab = 1}
+        if (n < 1) {ab = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+          
+        }
+
+        x[ab-1].style.display = "block";  
+      }
+
+      </script>
+      
+    <div class="title2" > Have a story to share?</div>
+    <div class="center">
+    <button class="open-button" onclick="openForm()"> Have a story to share? Click here!</button>
+  </div>
+     <div class="form-popup" id="myForm"> 
+    <form class="form-container" id="contactForm">
+      <div class="card">
+          <div class="card-body">
+            <img src="https://cdn.discordapp.com/attachments/740443180679299074/976713988291330128/circlewomandhood.PNG" style="width:10%"> </img>
+            <div class="questions"> Questions</div>
+            <div class="bullets"> 
+            <ul >
+              <li>What did you like about the Journey Toward Womanhood program?</li>
+              <li> How would you have grown/changed since the start of the program?</li>
+              <li> How has your program experience helped you achieve your short-term/long-term goals?</li>
+              <li> Feel free to add anything about your experience with Sisterhood Agenda.</li>
+            </ul>
+          </div>
+   
+            <input type="text" class="x1"id="story" placeholder="Share your story" required>
+            <div class="x2"> Attach your profile (jpg, png supported) </div>
+            <div class="x2">
+              <input type="file" name="files[]" id="files">
+              <!-- click here to upload file -->
+                 <input type="hidden"
+                     name="url"
+                     id="url">   
+                    </div>
+            </div>
+            <div class="x2"> Your Name </div>
+            <div class="x3"> 
+              <input type="text" id="name" class="ip" placeholder="Enter your name or nickname" required>
+
+            </div>
+            <div class="x2"> Your Email (optional) </div>
+            <div class="x3">
+              <input type="email" class="ip"
+              id="email" placeholder="name@example.com">
+            </div>
+            <div class="x2"> 
+              <input type="checkbox" required> By checking this box, I give Sisterhood Agenda permission to use this testimonial.
+            </div>
+          <button type="submit" class="btn btn-primary"
+              style=" margin-top: 2%; background-color: goldenrod;">
+              Submit
+          </button>
+          <button type="button" class="btn cancel" onclick="closeForm()"> Cancel </button>
+      </div>
+  </form>
+</div>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+   
+    //primarily for firebase, if you're using something else will have to change the details to the corresponding database.
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+import { getAnalytics} from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js';
+import {getDatabase,ref,set,onValue} from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js';
+import {getStorage,ref as sRef, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-storage.js';
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  //<Insert config>
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const storage = getStorage(app);
+const db = getDatabase(app);
+    // Initialize Firebase
+
+
+    //Code section to make sure inspect or devtool is disabled
+    $(document).bind("contextmenu",function(e) {
+    alert("Right click is disabled!");
+    e.preventDefault();
+    });
+    $(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+var node = document.querySelector('.testimonials');
+      const testing = ref(db,'participants/');
+     
+      onValue(testing, (snapshot) => {
+  snapshot.forEach((childSnapshot) => {
+    
+    const childKey = childSnapshot.key;
+  //  console.log(childKey);
+    const childData = childSnapshot.val();
+    var quotes = childData.name + '<br>' + '"' + childData.story +'"';
+    getDownloadURL(sRef(storage,"media/"+childData.name)).then((url) => {
+    // `url` is the download URL for 'images/stars.jpg'
+
+    // This can be downloaded directly:
+
+     //apending respective images to the correct testimonials using name as a key to fetch it.
+    var text_div = document.createElement('div');
+    text_div.innerHTML=`<img class="mySlides" alt="Avatar"src=${url} ><div class="testimonial-text">  ${quotes}  </div>`;
+    node.appendChild(text_div);
+    plusDivs(1);
+
+  })
+  .catch((error) => {
+    // Handle any errors
+    //if theres no images just append default image
+    var text_div = document.createElement('div');
+    text_div.innerHTML=`<img class="mySlides" alt="Avatar"src="https://cdn.discordapp.com/attachments/740443180679299074/976713988291330128/circlewomandhood.PNG" ><div class="testimonial-text">  ${quotes}  </div>`;
+    node.appendChild(text_div);
+    plusDivs(1);
+  });
+
+    
+    // ...
+  });
+}, {
+  onlyOnce: true
+});
+        document.getElementById('contactForm')
+            .addEventListener('submit', submitForm);
+ 
+        function submitForm(e) {
+            e.preventDefault();
+ 
+            // Get values
+            var name = getInputVal('name');
+            console.log('listing name');
+            console.log(name);
+            //retrieving user input values
+            var email = getInputVal('email');
+            var story = getInputVal('story');
+            var file = document.getElementById("files").files[0];
+            
+            if((!email && !file) || !file){
+              console.log(story);
+              saveMessage2(name, email,story,file,url);
+              document.getElementById('contactForm').reset();
+            }
+            else{
+              var url= file.name;
+              saveMessage(name, email,story,file,url);
+      
+       
+              document.getElementById('contactForm').reset();
+            }
+            
+    
+        
+        }
+ 
+        // Function to get get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+ 
+        // Save message to firebase
+        
+        //SaveMessage is if all fields were filled out.
+        function saveMessage(name, email,story,file,url) {
+        console.log('name in func');
+        console.log(name);
+        var storageRef = sRef(storage,"media/" + name);
+          uploadBytes(storageRef, file).then((snapshot) => {
+          console.log('Uploaded a blob or file!');
+                      
+          alert("Submission successful");
+          window.location.reload();
+        });
+        var messagesRef = ref(db,"participants/" + name);
+            set(messagesRef,{ name: name,
+                email: email,story:story,url:url});
+   
+         
+        }
+        //saveMessage2 is if only name and story is filled out for the form
+        function saveMessage2(name,email,story,url) {
+        console.log('story is: ');
+        console.log(story);
+        console.log(name);
+          email="";
+          url="";
+          var messagesRef = ref(db,"participants/" + name);
+         set(messagesRef,{ name: name,
+                email: email,story:story,url:url});
+          alert("Submission successful");
+          window.location.reload();
+         
+        }
+    
+
+  </script>
+  </div>
+ 
+</html>
